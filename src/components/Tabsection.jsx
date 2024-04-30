@@ -4,7 +4,7 @@ import { BorderBeam } from './ui/BorderBeam'
 const Tabsection = () => {
     return (
       <>
-      <div className="relative top-[-70px] container mx-auto flex w-full justify-center overflow-hidden">
+      <div className="relative top-[-70px] container max-w-[88rem] mx-auto flex w-full justify-center overflow-hidden">
 
          
           

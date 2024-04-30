@@ -32,5 +32,6 @@ body{
   background: black;
   color: white;
   position: relative;
+  /* padding: 0px 5% */
   /* scroll-behavior: smooth; */
 }

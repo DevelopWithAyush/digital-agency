@@ -5,12 +5,12 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <>
+    <main className='px-[3%]'>
       <Herosection />
       <Tabsection />
       <Tech/>
       {/* <Tech/> */}
-    </>
+    </main>
   )
 }
 
