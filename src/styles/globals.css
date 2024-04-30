@@ -32,5 +32,5 @@ body{
   background: black;
   color: white;
   position: relative;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
