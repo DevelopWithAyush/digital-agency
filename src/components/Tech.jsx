@@ -51,7 +51,7 @@ const Tech = () => {
             whileInView={() => {
               setAnimation(true)
             }}
-            animate={animation ? { height: "200px" } : {}}
+            animate={animation ? { height: "100%" } : {}}
             transition={{
               delay: .5,
               duration: 1
@@ -75,7 +75,7 @@ const Tech = () => {
         <div className='w-1 h-[400px] rounded-full'>
           <motion.div
             initial={{ height: "0px" }}
-            animate={animation ? { height: "400px" } : {}}
+            animate={animation ? { height: "100%" } : {}}
             transition={{
               delay: 2,
               duration: .5
