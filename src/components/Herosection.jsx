@@ -9,46 +9,48 @@ import { FaArrowRight } from "react-icons/fa";
 export function Herosection() {
   return (
     <>
-      <Vortex
-        backgroundColor="black"
-        rangeY={800}
-        particleCount={100}
-        baseHue={500}
-        className=""
-      />
-      <div
-        className="z-[100] py-[120px] container mx-auto h-screen relative
-            flex flex-col items-center justify-start  gap-[75px] md:gap-[105px] lg:gap-[105px] xl:gap-[150px] "
-      >
-        <div className=" flex flex-row items-center justify-center px-4 py-1 gap-10 rounded-[63px] border-[1px] border-solid border-[#51ff51]">
-          <AnimatedShinyText className="inline-flex items-center gap-1 justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            <HiSparkles className="text-yellow-400" />{" "}
-            <span>Grow with Ayush</span>
-            <FaArrowRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-          </AnimatedShinyText>
-        </div>
+      <section className="w-full flex flex-col items-center mt-[120px] ">
+        <Vortex
+          backgroundColor="black"
+          rangeY={800}
+          particleCount={100}
+          baseHue={500}
+          className=""
+        />
+        <div
+        className="container mx-auto  max-w-[88rem] flex flex-col items-center justify-start gap-[100px] md:gap-[140px] xl:gap-[200px] pb-[200px]  "
+        >
+          <div className="relative  flex flex-row items-center justify-center px-4 py-1 gap-10 rounded-[63px] border-[1px] border-solid border-[#51ff51]">
+            <AnimatedShinyText className="inline-flex items-center gap-1 justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+              <HiSparkles className="text-yellow-400" />{" "}
+              <span>Grow with Ayush</span>
+              <FaArrowRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+            </AnimatedShinyText>
+          </div>
 
-              <div className="w-full h-screen absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-[70px] ">
-                  <div className="w-full flex flex-col items-center justify-center gap-[15px]">
-                      <h1 className="text-[32px] leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px] font-bold w-[90%] md:max-w-5xl lg:max-w-[70rem] text-center capitalize ">
-                          Crafting digital experiences that captivate, innovate, and inspire
-                          growth.
-                      </h1>
-                      <p className="w-[90%] md:max-w-5xl lg:max-w-[70rem] text-[16px] md:text-[20px] md:leading-[20px] text-center leading-[16px] font-normal">
-                          {` "We offer comprehensive online solutions, including website
+          <div className="w-full relative flex flex-col items-center justify-center gap-[100px] ">
+            <div className="w-full flex flex-col items-center justify-center gap-[15px]">
+              <h1 className="text-[32px] leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px] font-bold w-[90%] md:max-w-5xl lg:max-w-[70rem] text-center capitalize ">
+                Crafting digital experiences that captivate, innovate, and inspire
+                growth.
+              </h1>
+              <p className="w-[90%] md:max-w-5xl lg:max-w-[70rem] text-[16px] md:text-[20px] md:leading-[20px] text-center leading-[16px] font-normal">
+                {` "We offer comprehensive online solutions, including website
             development, SEO, content creation, and social media management, to
             enhance brand visibility and engagement for diverse clients."`}
-                      </p>
-                  </div>
-                  <button
-                      className="
+              </p>
+            </div>
+            <button
+              className="
           overflow-hidden relative  flex flex-row items-center justify-center py-3 px-7 rounded-[13px] text-[20px] border-[1px] border-solid bg-opacity-5 border-[#FFF] border-opacity-15"
-                  >
-                      Contact us
-                      <BorderBeam size={100} duration={3} delay={9} />
-                  </button>
-     </div>
-      </div>
+            >
+              Contact us
+              <BorderBeam size={100} duration={3} delay={9} />
+            </button>
+          </div>
+          
+       </div>
+      </section>
     </>
   );
 }
