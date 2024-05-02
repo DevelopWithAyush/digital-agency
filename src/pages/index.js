@@ -12,7 +12,7 @@ const Home = () => {
       <Tabsection />
       <Tech/>
       <Services/>
-      <Steps/>
+      {/* <Steps/> */}
     </main>
   </>
   )
