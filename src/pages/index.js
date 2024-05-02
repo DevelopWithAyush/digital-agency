@@ -10,7 +10,7 @@ const Home = () => {
       <Herosection />
     <main className='px-[3%]'>
       <Tabsection />
-      {/* <Tech/> */}
+      <Tech/>
       <Services/>
       <Steps/>
     </main>
