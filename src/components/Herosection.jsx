@@ -9,7 +9,7 @@ import { FaArrowRight } from "react-icons/fa";
 export function Herosection() {
   return (
     <>
-      <section className="w-full flex flex-col items-center mt-[120px] ">
+      <section id="home" className="w-full flex flex-col items-center pt-[120px] ">
         <Vortex
           backgroundColor="black"
           rangeY={800}

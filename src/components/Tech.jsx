@@ -39,9 +39,11 @@ const reviews = [
 ];
 const Tech = () => {
   return (
-    <section className=" container  mx-auto max-w-[88rem]">
+    <section
+    id="tech"
+      className=" container  mx-auto max-w-[88rem]">
       <div className="grid grid-cols-12 ">
-        <div className="col-span-1 h-full flex flex-col items-center gap-5">
+        <div className="col-span-1 h-full flex flex-col items-center gap-[10px] md:gap-[14px] xl:gap-5">
           <div className="z-[98]  w-[2px] md:w-[3px] xl:w-[4px] h-[100px] md:h-[140px] xl:h-[200px] rounded-full">
             <motion.div
               initial={{ height: "0%" }}
@@ -95,11 +97,11 @@ const Tech = () => {
             exit={{
               opacity: 0,
             }}
-            className="text-[32px] max-w-3xl leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px]   font-bold"
+            className="text-[32px] max-w-3xl leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px] pl-4  font-bold"
           >
             Tech{" "}
             <span className="font-medium text-[#797979]">
-              that we used to grow your Business.
+              {`that we're using to grow your business.`} 
             </span>
           </motion.p>
         </div>
