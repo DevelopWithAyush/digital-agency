@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { FaCircleCheck } from "react-icons/fa6";
 

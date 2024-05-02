@@ -1,7 +1,6 @@
 import { cn } from "@/utils/cn";
 import React, { useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
-import { motion } from "framer-motion";
 
 
 export const Vortex = (props) => {
@@ -225,14 +224,13 @@ export const Vortex = (props) => {
 
     return (
         <div className={cn("absolute top-0 left-0 overflow-hidden h-[100vh] w-[100vw]")}>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+            <div
+                
                 ref={containerRef}
                 className="absolute h-full w-full inset-0 z-0 bg-transparent flex items-center justify-center"
             >
                 <canvas ref={canvasRef}></canvas>
-            </motion.div>
+            </div>
 
          
         </div>
