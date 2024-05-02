@@ -6,14 +6,38 @@ import { BorderBeam } from './ui/BorderBeam'
 const Services = () => {
   return (
     <motion.section
-      
+      initial={{
+        opacity: 0,
+      left:100
+      }}
+      whileInView={{
+        opacity: 1,
+        left:0
+      }}
+      transition={{
+        duration:0.5
+      }}
       id='services'
       className='relative  grid grid-cols-12 container mx-auto max-w-[88rem] border border-white border-opacity-10  md:border-none md:bg-white md:bg-opacity-5 backdrop-blur-[25px] rounded-[20px] py-[24px] px-[18px]  md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 gap-[10px] md:gap-[14px] xl:gap-5 '>
       <div className='absolute bottom-0 right-0 w-[300px] h-[300px] rounded-full bg-[#9c40ff] blur-[300px] -z-10 '/>
       <div className='col-span-12 mb-[20px] md:mb-[0px] md:col-span-6  py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] ' >
 
         <motion.p
-         
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.3,
+          }}
+          exit={{
+            opacity: 0,
+          }}
           className='text-[32px] leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px]   font-bold'>
                      Services <span className='font-medium text-[#797979]'>that we provide to grow your Business.</span>
                  </motion.p>
