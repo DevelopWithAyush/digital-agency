@@ -9,10 +9,10 @@ const Navbar = () => {
           <div className=' container mx-auto max-w-[90rem] flex flex-row items-center justify-between '>
               <p className='text-[32px] font-semibold '>logo</p>
               <nav className='hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2   items-center justify-center gap-[40px]'>
-                  <Link href={"#home"} className="text-[20px] capitalize text-gray-300">Home</Link>
-                  <Link href={"#tech"} className="text-[20px] capitalize text-gray-300">tech</Link>
-                  <Link href={"#services"} className="text-[20px] capitalize text-gray-300">services</Link>
-                  <Link href={"#steps"} className="text-[20px] capitalize text-gray-300">Steps</Link>
+                  <Link  href="#home" className="text-[20px] capitalize text-gray-300">Home</Link>
+                  <Link href="#tech" className="text-[20px] capitalize text-gray-300">tech</Link>
+                  <Link href="#services" className="text-[20px] capitalize text-gray-300">services</Link>
+                  <Link href="#steps" className="text-[20px] capitalize text-gray-300">Steps</Link>
                   <Link href={"/"} className="text-[20px] capitalize text-gray-300">Testimonial</Link>
                   <Link href={"/"} className="text-[20px] capitalize text-gray-300">blogs</Link>
               </nav>
