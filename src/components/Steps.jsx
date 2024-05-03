@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaCircleCheck } from "react-icons/fa6";
 import { useElementVisibility } from "./Hooks/useVisible";
+import { useMediaSizes } from "./Hooks/useMediaSizes";
 
 const points = [
   "Client Consultation: We start by understanding your goals and requirements through a thorough consultation process.",
@@ -13,17 +14,7 @@ const points = [
 ];
 
 const Steps = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
-    };
-
-    handleResize(); // Check initial size
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const {lg,xl} = useMediaSizes()
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
   return (
@@ -52,11 +43,11 @@ const Steps = () => {
               <div className="w-full grid  grid-cols-12   ">
                 <div
                   ref={ref}
-                  className={` origin-left col-span-12 lg:col-span-8 lg:bg-white lg:bg-opacity-5 backdrop-blur-[25px] border-none lg:border-[1px] lg:border-solid border-green-400 border-opacity-10 flex items-center justify-center text-[32px] rounded-[12px] py-[0px] md:py-[0px] lg:py-12 px-[18px] md:px-[25.2px] lg:px-9 delay-500 duration-500 ${
-                    isVisible
-                      ? "scale-x-100 opacity-100"
-                      : "scale-x-0 opacity-0"
-                  }`}
+                  className=" origin-left col-span-12 lg:col-span-8 lg:bg-white lg:bg-opacity-5 backdrop-blur-[25px] border-none lg:border-[1px] lg:border-solid border-green-400 border-opacity-10 flex items-center justify-center text-[32px] rounded-[12px] py-[0px] md:py-[0px] lg:py-12 px-[18px] md:px-[25.2px] lg:px-9 delay-500 duration-500 "
+                  style={{
+                    opacity:`${isVisible?"1":"0"}`,
+                    transform: `${isVisible && (lg||xl) ? `scaleX(1)`: `${(lg||xl)?`scaleX(0)`:"scaleX(1)"}` }`
+                  }}
                 >
                   <div className="w-full h-full ">
                     <p className="text-center font-semibold"> Workflow</p>
@@ -82,6 +73,7 @@ const Steps = () => {
 export default Steps;
 
 const Points = ({ point, index }) => {
+  const { sm, md, lg, xl } = useMediaSizes();
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
   return (
@@ -92,7 +84,7 @@ const Points = ({ point, index }) => {
         transitionDuration: "0.3s",
         transitionDelay: `${1.5 + index * 0.3}s`,
         opacity: `${isVisible ? 1 : 0}`,
-        left: `${isVisible ? "0px" : "-50px"}`,
+        left: `${isVisible && (lg || xl) ? '0px' : `${lg || xl ? '-50px' : "0px"}`}`,
       }}
     >
       <div className="mt-[6px] col-span-1 flex items-center justify-center">
@@ -165,6 +157,7 @@ const DownLine = () => {
 const P = () => {
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
+  const {lg,xl} = useMediaSizes()
   return (
     <p
       ref={ref}
@@ -172,7 +165,7 @@ const P = () => {
       style={{
         transitionDuration: ".5s",
         opacity: `${isVisible ? 1 : 0}`,
-        left: `${isVisible ? "0px" : "-50px"}`,
+        left: `${isVisible && (lg || xl) ? '0px' : `${lg || xl ? '-50px' : "0px"}`}`,
         transitionDelay: "1s",
       }}
     >

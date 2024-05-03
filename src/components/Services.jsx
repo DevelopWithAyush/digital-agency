@@ -2,18 +2,29 @@
 import React, { useRef } from 'react'
 import { BorderBeam } from './ui/BorderBeam'
 import { useElementVisibility } from './Hooks/useVisible'
+import { useMediaSizes } from './Hooks/useMediaSizes'
 
 const Services = () => {
 
   const ref = useRef(null)
   const isVisible = useElementVisibility(ref)
+  const { sm, md, lg, xl } = useMediaSizes(); // Use the hook to check the media sizes.
+
 
   return (
       <section
        ref={ref}
    
       id='services'
-      className={`scroll-smooth relative  grid grid-cols-12 container mx-auto max-w-[88rem] border border-white border-opacity-10  md:border-none md:bg-white md:bg-opacity-5 backdrop-blur-[25px] rounded-[20px] py-[24px] px-[18px]  md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 gap-[10px] md:gap-[14px] delay-500 duration-300 xl:gap-5 ${isVisible?"md:left-[0px] opacity-100": "opacity-0 md:left-[50px]"}`}>
+      className="scroll-smooth relative overflow-hidden  grid grid-cols-12 container mx-auto max-w-[88rem] border border-white border-opacity-10  md:border-none md:bg-white md:bg-opacity-5 backdrop-blur-[25px] rounded-[20px] py-[24px] px-[18px]  md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 gap-[10px] md:gap-[14px] xl:gap-5 "
+      style={{
+        opacity: `${isVisible ? "1" : "0"}`,
+        left: `${isVisible && (lg || xl) ? '0px' : `${lg||xl?'100px':"0px"}`}`,
+        transitionDuration: '500ms',
+        transitionDelay:"0.5s"
+        
+      }}
+    >
         <div className='absolute bottom-0 right-0 w-[300px] h-[300px] rounded-full bg-[#9c40ff] blur-[300px] -z-10 ' />
         <div className='col-span-12 mb-[20px] md:mb-[0px] md:col-span-6  py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] ' >
 

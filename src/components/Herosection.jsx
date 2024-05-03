@@ -21,7 +21,9 @@ export function Herosection() {
         <div
         className="container mx-auto  max-w-[88rem] flex flex-col items-center justify-start gap-[100px] md:gap-[140px] xl:gap-[200px] pb-[200px]  "
         >
-          <div className="relative  flex flex-row items-center justify-center px-4 py-1 gap-10 rounded-[63px] border-[1px] border-solid border-[#51ff51]">
+          <div className="relative  flex flex-row items-center justify-center px-4 py-1 gap-10 rounded-[63px]  border border-solid border-[#9c40ff]  "
+         
+          >
             <AnimatedShinyText className="inline-flex items-center gap-1 justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
               <HiSparkles className="text-yellow-400" />{" "}
               <span>Grow with Ayush</span>

@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import Infinitemovingcr from "./ui/Infinitemovingcr";
 import { useElementVisibility } from "@/components/Hooks/useVisible";
+import { useMediaSizes } from "./Hooks/useMediaSizes";
 
 const reviews = [
   {
@@ -145,10 +146,10 @@ const DownLine = () => {
     </div>
   );
 };
-
 const P = () => {
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
+  const { lg, xl } = useMediaSizes()
   return (
     <p
       ref={ref}
@@ -156,7 +157,7 @@ const P = () => {
       style={{
         transitionDuration: ".5s",
         opacity: `${isVisible ? 1 : 0}`,
-        left: `${isVisible ? "0px" : "-50px"}`,
+        left: `${isVisible && (lg || xl) ? '0px' : `${lg || xl ? '-50px' : "0px"}`}`,
         transitionDelay: "1s",
       }}
     >
