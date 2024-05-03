@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef } from 'react'
 import { BorderBeam } from './ui/BorderBeam'
 import { useElementVisibility } from './Hooks/useVisible'

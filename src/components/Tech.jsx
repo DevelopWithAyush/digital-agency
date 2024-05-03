@@ -1,6 +1,7 @@
+"use client";
 import React, { useRef, useState } from "react";
 import Infinitemovingcr from "./ui/Infinitemovingcr";
-import { useElementVisibility } from "@/components/Hooks/useVisible"
+import { useElementVisibility } from "@/components/Hooks/useVisible";
 
 const reviews = [
   {
@@ -38,33 +39,28 @@ const reviews = [
   },
 ];
 const Tech = () => {
-
   const ref = useRef(null); // Create a ref for the component we want to observe.
   const isVisible = useElementVisibility(ref); // Use the hook to check visibility.
-  console.log(isVisible)
+  console.log(isVisible);
   return (
-    <section
-    id="tech"
-      className=" container  mx-auto max-w-[88rem]">
+    <section id="tech" className=" container  mx-auto max-w-[88rem]">
       <div className="grid grid-cols-12 ">
         <div className="col-span-1 h-full flex flex-col items-center gap-[10px] md:gap-[14px] xl:gap-5">
-          <UpperLine/>
-          <Emoji/>
-
+          <UpperLine />
+          <Emoji />
         </div>
         <div
           className="col-span-11   pt-[100px] md:pt-[140px] xl:pt-[200px]
               "
         >
-         <P/>
+          <P />
         </div>
       </div>
       <div className="grid grid-cols-12 ">
         <div className="col-span-1 h-full  flex items-center flex-col ">
-          <DownLine/>
+          <DownLine />
         </div>
         <div className="col-span-11  pt-[75px]   pb-[100px] md:pb-[140px] xl:pb-[200px]">
-
           <div className=" flex w-full  relative overflow-x-hidden ">
             <Infinitemovingcr className="[--duration:20s]">
               {reviews.map((review, index) => (
@@ -89,69 +85,85 @@ const Card = ({ review }) => {
   );
 };
 
-
 const UpperLine = () => {
-  const ref = useRef(null)
-  const isVisible = useElementVisibility(ref)
+  const ref = useRef(null);
+  const isVisible = useElementVisibility(ref);
   return (
     <div className="z-[98]  w-[2px] md:w-[3px] xl:w-[4px] h-[100px] md:h-[140px] xl:h-[200px] rounded-full">
       <div
         ref={ref}
-
-        className={`w-[2px] md:w-[3px] xl:w-[4px]  transition-all delay-500 duration-300 rounded-full ${isVisible ? "h-full" : "h-0"} `}
-
+        className="w-[2px] md:w-[3px] xl:w-[4px]  transition-all  rounded-full "
         style={{
           background:
             "linear-gradient(transparent, rgb(46, 160, 67), rgb(63, 185, 80))",
+          height: `${isVisible ? "100%" : "0%"}`,
+          transitionDelay: ".5s",
+          transitionDuration: ".5s",
         }}
       ></div>
     </div>
-  )
-}
+  );
+};
+
 const Emoji = () => {
-  const ref = useRef(null)
-  const isVisible = useElementVisibility(ref)
+  const ref = useRef(null);
+  const isVisible = useElementVisibility(ref);
   return (
-
-    <div ref={ref}
-
-      className={`relative text-[32px] leading-[32px] md:text-[48px] md:leading-[48px] xl:text-[56px] xl:leading-[56px] duration-[0.3s] delay-[0.8s] font-bold ${isVisible?"opacity-100":"opacity-0"} `}
+    <div
+      ref={ref}
+      className="relative text-[32px] leading-[32px] md:text-[48px] md:leading-[48px] xl:text-[56px] xl:leading-[56px]   font-bold "
+      style={{
+        transitionDuration: ".5s",
+        opacity: `${isVisible ? 1 : 0}`,
+        transitionDelay: "1s",
+      }}
     >
       <div className=" bg-[#3cfc46] w-[50%] h-[50%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 blur-[20px]"></div>
       🧑‍💻
     </div>
-  )
-}
-const DownLine = () => {
-  const ref = useRef(null)
-  const isVisible = useElementVisibility(ref)
-  return (
-    <div ref={ref} className=" w-[2px] md:w-[3px] xl:w-[4px] h-full rounded-full">
-      <div
+  );
+};
 
-        className={`w-[2px] md:w-[3px] xl:w-[4px] h-[100%] delay-[1.1s] duration-[.3s] rounded-full ${isVisible?"h-full":"h-0"} `}
+const DownLine = () => {
+  const ref = useRef(null);
+  const isVisible = useElementVisibility(ref);
+  return (
+    <div
+      ref={ref}
+      className=" w-[2px] md:w-[3px] xl:w-[4px] h-full rounded-full"
+    >
+      <div
+        className="w-[2px] md:w-[3px] xl:w-[4px]   rounded-full "
         style={{
           background:
             "linear-gradient( rgb(63, 185, 80), rgb(46, 160, 67), transparent)",
+          height: `${isVisible ? "100%" : "0%"}`,
+          transitionDelay: "1.5s",
+          transitionDuration: ".5s",
         }}
       ></div>
     </div>
-  )
-}
+  );
+};
 
 const P = () => {
-  const ref = useRef(null)
-  const isVisible = useElementVisibility(ref)
+  const ref = useRef(null);
+  const isVisible = useElementVisibility(ref);
   return (
     <p
       ref={ref}
-
-      className={`relative text-[32px] max-w-3xl leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px] pl-4 duration-[0.3s] delay-[0.8s] font-bold ${isVisible?"left-[0px] opacity-100":"left-[-100px] opacity-0"}`}
+      className="relative text-[32px] max-w-3xl leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px] pl-4 duration-[0.3s] delay-[0.8s] font-bold "
+      style={{
+        transitionDuration: ".5s",
+        opacity: `${isVisible ? 1 : 0}`,
+        left: `${isVisible ? "0px" : "-50px"}`,
+        transitionDelay: "1s",
+      }}
     >
       Tech{" "}
       <span className="font-medium text-[#797979]">
         {`that we're using to grow your business.`}
       </span>
     </p>
-  )
-}
+  );
+};
