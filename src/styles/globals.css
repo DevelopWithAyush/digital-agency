@@ -11,6 +11,11 @@ html {
   overflow-x: hidden;
   /* background-color: black; */
 }
+ 
+*::selection{
+  background: white;
+  color: black;
+} 
 
 html::-webkit-scrollbar {
   width: 0rem;
