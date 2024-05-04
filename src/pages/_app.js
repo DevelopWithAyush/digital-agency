@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import MouseState from "@/components/context/MouseContext";
 import "@/styles/globals.css";
@@ -9,6 +10,7 @@ export default function App({ Component, pageProps }) {
       <MouseState>
         <Navbar />
         <Component {...pageProps} />
+        <Footer/>
        </MouseState>
     </>
   );

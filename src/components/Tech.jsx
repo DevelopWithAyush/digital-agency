@@ -90,10 +90,10 @@ const UpperLine = () => {
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
   return (
-    <div className="z-[98]  w-[2px] md:w-[3px] xl:w-[4px] h-[100px] md:h-[140px] xl:h-[200px] rounded-full">
+    <div className="z-[98]  w-[4px] h-[100px] md:h-[140px] xl:h-[200px] rounded-full">
       <div
         ref={ref}
-        className="w-[2px] md:w-[3px] xl:w-[4px]  transition-all  rounded-full "
+        className="w-[4px]  transition-all  rounded-full "
         style={{
           background:
             "linear-gradient(transparent, rgb(46, 160, 67), rgb(63, 185, 80))",
@@ -131,10 +131,10 @@ const DownLine = () => {
   return (
     <div
       ref={ref}
-      className=" w-[2px] md:w-[3px] xl:w-[4px] h-full rounded-full"
+      className=" w-[4px] h-full rounded-full"
     >
       <div
-        className="w-[2px] md:w-[3px] xl:w-[4px]   rounded-full "
+        className="w-[4px]   rounded-full "
         style={{
           background:
             "linear-gradient( rgb(63, 185, 80), rgb(46, 160, 67), transparent)",

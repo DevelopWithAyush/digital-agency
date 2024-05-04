@@ -18,7 +18,7 @@ const mousecontext = useContext(MouseContext)
     
  
   return (
-      <div id='cursor' className='z-[1000] w-[100px] h-[100px] blur-[100px]    pointer-events-none rounded-full fixed -translate-x-1/2 -translate-y-1/2 top-0 left-0     '
+      <div id='cursor' className='z-[1000] w-[100px] h-[100px] blur-[100px] hidden lg:flex   pointer-events-none rounded-full fixed -translate-x-1/2 -translate-y-1/2 top-0 left-0     '
           style={showcursor}
       
       ></div>      

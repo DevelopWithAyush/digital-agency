@@ -44,10 +44,10 @@ const Steps = () => {
         <div className="col-span-11  pt-[75px]   pb-[100px] md:pb-[140px] xl:pb-[200px]">
           <div className="   grid grid-cols-12  pl-4 lg:pl-9  w-full   ">
             <div className="col-span-12 lg:col-span-6 w-full    bg-red-40    pt-12 ">
-              <div className="w-full grid  grid-cols-12   ">
+              <div className="w-full hidden lg:grid  grid-cols-12   ">
                 <div
                   ref={ref}
-                  className=" origin-left col-span-12 lg:col-span-8 lg:bg-white lg:bg-opacity-5 backdrop-blur-[25px] border-none lg:border-[1px] lg:border-solid border-green-400 border-opacity-10 flex items-center justify-center text-[32px] rounded-[12px] py-[0px] md:py-[0px] lg:py-12 px-[18px] md:px-[25.2px] lg:px-9 delay-500 duration-500 "
+                  className="  origin-left col-span-12 lg:col-span-8 lg:bg-white lg:bg-opacity-5 backdrop-blur-[25px] border-none lg:border-[1px] lg:border-solid border-green-400 border-opacity-10 flex items-center justify-center text-[32px] rounded-[12px] py-[0px] md:py-[0px] lg:py-12 px-[18px] md:px-[25.2px] lg:px-9 delay-500 duration-500 "
                   style={{
                     opacity:`${isVisible?"1":"0"}`,
                     transform: `${isVisible && (lg||xl) ? `scaleX(1)`: `${(lg||xl)?`scaleX(0)`:"scaleX(1)"}` }`
@@ -92,7 +92,7 @@ const Points = ({ point, index }) => {
       style={{
         transitionDuration: "0.3s",
         transitionDelay: `${1.5 + index * 0.3}s`,
-        opacity: `${isVisible ? 1 : 0}`,
+        opacity: `${isVisible && (lg||xl) ? 1 : (lg||xl)?0:1}`,
         left: `${isVisible && (lg || xl) ? '0px' : `${lg || xl ? '-50px' : "0px"}`}`,
       }}
     >
@@ -108,10 +108,10 @@ const UpperLine = () => {
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
   return (
-    <div className="z-[98]  w-[2px] md:w-[3px] xl:w-[4px] h-[100px] md:h-[140px] xl:h-[200px] rounded-full">
+    <div className="z-[98]   w-[4px] h-[100px] md:h-[140px] xl:h-[200px] rounded-full">
       <div
         ref={ref}
-        className="w-[2px] md:w-[3px] xl:w-[4px]  transition-all  rounded-full "
+        className="w-[4px]  transition-all  rounded-full "
         style={{
           background: "linear-gradient(transparent, #7C72FF 30%)",
           height: `${isVisible ? "100%" : "0%"}`,
@@ -148,10 +148,10 @@ const DownLine = () => {
   return (
     <div
       ref={ref}
-      className=" w-[2px] md:w-[3px] xl:w-[4px] h-full rounded-full"
+      className="w-[4px] h-full rounded-full"
     >
       <div
-        className="w-[2px] md:w-[3px] xl:w-[4px]   rounded-full "
+        className="w-[4px]   rounded-full "
         style={{
           background: "linear-gradient( #7C72FF 30%,transparent )",
           height: `${isVisible ? "100%" : "0%"}`,
@@ -192,11 +192,10 @@ const HorizontalLine = () => {
   return (
     <div
       ref={ref}
-      className="h-[100px] md:h-[140px] lg:h-full w-full  col-span-12 flex items-start lg:items-center justify-center lg:justify-start lg:col-span-4   
-              "
+      className="h-[50px] md:h-[140px] lg:h-full w-full  col-span-12 flex items-start lg:items-center justify-center lg:justify-start lg:col-span-4"
     >
       <div
-        className={` lg:h-1 w-[2px] delay-[1s] duration-500  ${
+        className={` lg:h-1 w-[4px] delay-[1s] duration-500  ${
           isVisible ? "opacity-100 lg:w-full h-full " : "lg:w-0 h-0"
         } `}
         style={{
