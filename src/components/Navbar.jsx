@@ -14,8 +14,7 @@ const Navbar = () => {
                   <Link href="#tech" className="text-[20px] capitalize text-gray-300">tech</Link>
                   <Link href="#services" className="text-[20px] capitalize text-gray-300">services</Link>
                   <Link href="#steps" className="text-[20px] capitalize text-gray-300">Steps</Link>
-                  <Link href={"#testimonial"} className="text-[20px] capitalize text-gray-300">Testimonial</Link>
-                  <Link href={"/"} className="text-[20px] capitalize text-gray-300">blogs</Link>
+                
               </nav>
               <button className='flex relative gap-[10px] flex-shrink-0 items-center rounded-[12px] border border-white border-opacity-20 justify-center py-2 px-6 text-[20px]'
                   style={{

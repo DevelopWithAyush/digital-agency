@@ -18,12 +18,13 @@ const Home = () => {
   return (<>
   <Cursor/>
       <Herosection />
+    <main className='px-3'>
       <Tabsection />
-      <Tech/>
-      <Services/>
+      <Tech />
+      <Services />
       <Steps />
-    <CallToAction />
-    
+      <CallToAction />
+    </main>   
   </>
   )
 }

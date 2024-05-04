@@ -11,7 +11,9 @@ const Services = () => {
   const { setCursor } =useContext(MouseContext)
 
   return (
-      <section
+    <section
+      onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"purple"})}
+      onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFFF"})}
        ref={ref}
    
       id='services'
@@ -35,8 +37,6 @@ const Services = () => {
         </div>
 
         <div 
-        onMouseEnter={() => setCursor({ opacity: 1, backgroundColor:"#9c40ff"})}
-        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
         
         className='col-span-12 md:col-span-6 xl:col-span-3 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >Web Development</p>
@@ -44,8 +44,6 @@ const Services = () => {
         </div>
 
         <div 
-        onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"green"})}
-        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
         
         className='col-span-12 md:col-span-6 xl:col-span-3 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >Video Editing</p>
@@ -53,8 +51,6 @@ const Services = () => {
         </div>
 
         <div 
-        onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"red"})}
-        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
         
         className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px] md:gap-[14px] xl:gap-5  ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >Content Creation</p>
@@ -62,8 +58,6 @@ const Services = () => {
         </div>
 
         <div 
-        onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"purple"})}
-        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
         
         className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >SEO </p>
@@ -71,8 +65,6 @@ const Services = () => {
         </div>
 
         <div 
-        onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"crimson"})}
-        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
         
         className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >Digital Marketing</p>
