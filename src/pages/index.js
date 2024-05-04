@@ -1,7 +1,6 @@
 "use client"
 import Cursor from '@/components/Cursor'
 import { Herosection } from '@/components/Herosection'
-import Services from '@/components/Services'
 import Steps from '@/components/Steps'
 import Tabsection from '@/components/Tabsection'
 import Tech from '@/components/Tech'
