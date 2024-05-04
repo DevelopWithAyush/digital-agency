@@ -21,7 +21,6 @@ const Home = () => {
     <main className='px-3'>
       <Tabsection />
       <Tech />
-      <Services />
       <Steps />
       <CallToAction />
     </main>   
