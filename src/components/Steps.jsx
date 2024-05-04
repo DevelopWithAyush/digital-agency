@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaCircleCheck } from "react-icons/fa6";
 import { useElementVisibility } from "./Hooks/useVisible";
 import { useMediaSizes } from "./Hooks/useMediaSizes";
+import { MouseContext } from "./context/MouseContext";
 
 const points = [
   "Client Consultation: We start by understanding your goals and requirements through a thorough consultation process.",
@@ -17,6 +18,9 @@ const Steps = () => {
   const {lg,xl} = useMediaSizes()
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
+
+  const { setCursor } = useContext(MouseContext)
+  
   return (
     <section id="steps" className=" container   mx-auto max-w-[88rem] relative">
       <div className="absolute bottom-0 right-0 blur-[200px] rounded-full w-[300px] h-[300px] bg-[#7C72FF]" />
@@ -58,7 +62,12 @@ const Steps = () => {
                 <HorizontalLine />
               </div>
             </div>
-            <div className="col-span-12 lg:col-span-6  py-[24px] md:py-[33.6px] lg:py-12 px-[18px] md:px-[25.2px] lg:px-9 bg-white bg-opacity-5 backdrop-blur-[25px] border border-white border-opacity-10 rounded-[12px] flex flex-col gap-5 ">
+            <div
+              onMouseEnter={() => {
+                setCursor({opacity:1,background:"green"})
+            }}
+              onMouseLeave={()=>setCursor({opacity:0,background:"green"})}
+              className="col-span-12 lg:col-span-6  py-[24px] md:py-[33.6px] lg:py-12 px-[18px] md:px-[25.2px] lg:px-9 bg-white bg-opacity-5 backdrop-blur-[25px] border border-white border-opacity-10 rounded-[12px] flex flex-col gap-5 ">
               {points.map((point, index) => {
                 return <Points key={index} point={point} index={index} />;
               })}

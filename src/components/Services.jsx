@@ -1,15 +1,14 @@
-"use client"
-import React, { useRef } from 'react'
-import { BorderBeam } from './ui/BorderBeam'
+import React, { useContext, useRef } from 'react'
 import { useElementVisibility } from './Hooks/useVisible'
 import { useMediaSizes } from './Hooks/useMediaSizes'
+import { MouseContext } from './context/MouseContext'
 
 const Services = () => {
 
   const ref = useRef(null)
   const isVisible = useElementVisibility(ref)
   const { sm, md, lg, xl } = useMediaSizes(); // Use the hook to check the media sizes.
-
+  const { setCursor } =useContext(MouseContext)
 
   return (
       <section
@@ -18,14 +17,14 @@ const Services = () => {
       id='services'
       className="scroll-smooth relative overflow-hidden  grid grid-cols-12 container mx-auto max-w-[88rem] border border-white border-opacity-10  md:border-none md:bg-white md:bg-opacity-5 backdrop-blur-[25px] rounded-[20px] py-[24px] px-[18px]  md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 gap-[10px] md:gap-[14px] xl:gap-5 "
       style={{
-        opacity: `${isVisible ? "1" : "0"}`,
         left: `${isVisible && (lg || xl) ? '0px' : `${lg||xl?'100px':"0px"}`}`,
+        // opacity: `${isVisible ? "1" : "0"}`,
         transitionDuration: '500ms',
         transitionDelay:"0.5s"
         
       }}
     >
-        <div className='absolute bottom-0 right-0 w-[300px] h-[300px] rounded-full bg-[#9c40ff] blur-[300px] -z-10 ' />
+        {/* <div className='absolute bottom-0 right-0 w-[300px] h-[300px] rounded-full blur-[300px] -z-10 ' /> */}
         <div className='col-span-12 mb-[20px] md:mb-[0px] md:col-span-6  py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] ' >
 
           <p
@@ -35,27 +34,47 @@ const Services = () => {
           </p>
         </div>
 
-        <div className='col-span-12 md:col-span-6 xl:col-span-3 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
+        <div 
+        onMouseEnter={() => setCursor({ opacity: 1, backgroundColor:"#9c40ff"})}
+        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
+        
+        className='col-span-12 md:col-span-6 xl:col-span-3 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >Web Development</p>
           <p className='text-[16px] text-[#adadad]'  >{`Crafting bespoke websites tailored to your brand's identity, ensuring seamless functionality and user experience.`}</p>
         </div>
 
-        <div className='col-span-12 md:col-span-6 xl:col-span-3 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
+        <div 
+        onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"green"})}
+        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
+        
+        className='col-span-12 md:col-span-6 xl:col-span-3 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >Video Editing</p>
           <p className='text-[16px] text-[#adadad]'  >{`Transforming raw footage into captivating visual stories that engage and inspire your audience.`}</p>
         </div>
 
-        <div className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px] md:gap-[14px] xl:gap-5  ' >
+        <div 
+        onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"red"})}
+        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
+        
+        className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px] md:gap-[14px] xl:gap-5  ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >Content Creation</p>
           <p className='text-[16px] text-[#adadad]'  >Generating compelling and relevant content across various platforms to enhance brand visibility and engagement.</p>
         </div>
 
-        <div className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
+        <div 
+        onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"purple"})}
+        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
+        
+        className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >SEO </p>
           <p className='text-[16px] text-[#adadad]'  >Optimizing your online presence to rank higher in search engine results, driving organic traffic and boosting visibility.</p>
         </div>
 
-        <div className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
+        <div 
+        onMouseEnter={()=>setCursor({opacity:1,backgroundColor:"crimson"})}
+        onMouseLeave={()=>setCursor({opacity:0,backgroundColor:"#FFF"})}
+        
+        className='col-span-12 md:col-span-6 xl:col-span-4 md:bg-transparent md:bg-opacity-100 md:backdrop-blur-0 bg-white bg-opacity-5 backdrop-blur-[250px]  border border-white border-opacity-10 py-[18px] px-[18px] md:py-[33.6px] md:px-[25.2px] xl:py-12 xl:px-9 rounded-[12px] flex flex-col items-start gap-[10px]  md:gap-[14px] xl:gap-5 ' >
           <p className='text-[28px] leading-[28px] font-semibold text-[#fff] ' >Digital Marketing</p>
           <p className='text-[16px] text-[#adadad]'  >Implementing strategic campaigns across digital channels to increase brand awareness, drive conversions, and maximize ROI.</p>
         </div>
