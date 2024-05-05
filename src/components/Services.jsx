@@ -13,8 +13,8 @@ const Services = () => {
       <div className=" z-10 col-span-12 md:col-span-6 xl:col-span-3 py-12 px-9  border border-opacity-10 border-solid border-white rounded-xl flex flex-col items-start gap-5 bg-white bg-opacity-5 backdrop-blur-[25px] ">
         <p className="text-[28px] leading-[32px] font-semibold">Web Development</p>
         <p className="text-[16px] text-[#797979] leading-[22px]">
-          Crafting bespoke websites tailored to your brand's identity, ensuring
-          seamless functionality and user experience.
+                  {`  Crafting bespoke websites tailored to your brand's identity, ensuring
+          seamless functionality and user experience.`}
         </p>
       </div>
       <div className=" z-10 col-span-12 md:col-span-6 xl:col-span-3 py-12 px-9  border border-opacity-10 border-solid border-white rounded-xl flex flex-col items-start gap-5 bg-white bg-opacity-5 backdrop-blur-[25px] ">
