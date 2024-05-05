@@ -7,6 +7,7 @@ import Tech from '@/components/Tech'
 import CallToAction from '@/components/CallToAction'
 import React, { useEffect } from 'react'
 import SmoothScrolling from '@/components/SmoothScrolling'
+import Services from '@/components/Services'
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       <main className='px-3'>
         <Tabsection />
         <Tech />
+        <Services/>
         <Steps />
         <CallToAction />
       </main> 

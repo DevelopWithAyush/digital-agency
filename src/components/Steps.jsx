@@ -31,7 +31,7 @@ const Steps = () => {
           <Emoji />
         </div>
         <div
-          className="col-span-11   pt-[100px] md:pt-[140px] xl:pt-[200px]
+          className="col-span-11   pt-[140px] xl:pt-[200px]
               "
         >
           <P />
@@ -108,7 +108,7 @@ const UpperLine = () => {
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
   return (
-    <div className="z-[98]   w-[4px] h-[100px] md:h-[140px] xl:h-[200px] rounded-full">
+    <div className="z-[98]   w-[4px] h-[140px] xl:h-[200px] rounded-full">
       <div
         ref={ref}
         className="w-[4px]  transition-all  rounded-full "

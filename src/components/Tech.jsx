@@ -51,7 +51,7 @@ const Tech = () => {
           <Emoji />
         </div>
         <div
-          className="col-span-11   pt-[100px] md:pt-[140px] xl:pt-[200px]
+          className="col-span-11   pt-[140px] xl:pt-[200px]
               "
         >
           <P />
@@ -80,7 +80,7 @@ const Tech = () => {
 export default Tech;
 const Card = ({ review }) => {
   return (
-    <div className="w-[100px]  overflow-hidden h-[200px]  text-2xl flex items-center justify-center">
+    <div className=" xl:w-[100px] xl:h-[200px]   w-[50px] md:h-[140px] md:w-[70px] h-[100px]  overflow-hidden text-2xl flex items-center justify-center">
       <img className="w-full h-auto" alt="aysh" src={review.img} />
     </div>
   );
@@ -90,7 +90,7 @@ const UpperLine = () => {
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
   return (
-    <div className="z-[98]  w-[4px] h-[100px] md:h-[140px] xl:h-[200px] rounded-full">
+    <div className="z-[98]  w-[4px] h-[140px] xl:h-[200px] rounded-full">
       <div
         ref={ref}
         className="w-[4px]  transition-all  rounded-full "
