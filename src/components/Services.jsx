@@ -3,7 +3,6 @@ import React from "react";
 const Services = () => {
   return (
       <section className=" relative container mx-auto max-w-[88rem]   bg-white bg-opacity-5 backdrop-blur-[25px] grid grid-cols-12 gap-5 py-6 px-6 md:py-[33.6px] md:px-[33.6px]  xl:py-12 xl:px-12 rounded-3xl  ">
-          <div className="w-[300px] h-[300px] rounded-full bg-[#2EA043] blur-[300px] absolute bottom-0 right-0 -z-10 "/>
       <p className="font-bold col-span-12 md:col-span-6 xl:col-span-6 py-12 px-9   rounded-xl text-[32px] max-w-3xl leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px]">
         Services{" "}
         <span className="font-medium text-[#797979]">
