@@ -7,7 +7,6 @@ import Tech from '@/components/Tech'
 import CallToAction from '@/components/CallToAction'
 import React, { useEffect } from 'react'
 import SmoothScrolling from '@/components/SmoothScrolling'
-import Services from '@/components/Services'
 import ServiceSection from '@/components/ServiceSection'
 
 

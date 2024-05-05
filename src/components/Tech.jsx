@@ -63,7 +63,7 @@ const Tech = () => {
         </div>
         <div className="col-span-11  pt-[75px]   pb-[100px] md:pb-[140px] xl:pb-[200px]">
           <div className=" flex w-full  relative overflow-x-hidden ">
-            <Infinitemovingcr className="[--duration:20s]">
+            <Infinitemovingcr className="[--duration:20s] []">
               {reviews.map((review, index) => (
                 <Card key={index} review={review} />
               ))}

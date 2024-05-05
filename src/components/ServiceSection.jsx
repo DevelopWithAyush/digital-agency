@@ -5,7 +5,7 @@ const ServiceSection = () => {
       <section id='services' className=' relative container mx-auto max-w-[88rem] bg-white bg-opacity-5 backdrop-blur-[25px] rounded-3xl  flex flex-wrap py-6 px-6 md:py-[33.6px] md:px-[33.6px] xl:py-12 xl:px-12  '>
           <div className="w-[300px] h-[300px] rounded-full bg-[#2EA043] blur-[300px] absolute bottom-0 right-0 -z-10 " />
 
-          <div className=' w-6/12 px-[10px] py-[10px]  ' > 
+          <div className=' md:w-6/12 px-[10px] py-[10px]  ' > 
           
                   
                   <p className="font-bold w-full  py-12 px-9   rounded-xl text-[32px]  leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[48px] lg:leading-[48px] xl:text-[56px] xl:leading-[56px]">
@@ -15,7 +15,7 @@ const ServiceSection = () => {
                       </span>
                   </p>
            </div>
-          <div className=' w-3/12 px-[10px] py-[10px]  ' > 
+          <div className='w-full md:w-6/12 xl:w-3/12 px-[10px] py-[10px]  ' > 
           
           <div className='border border-solid border-white border-opacity-5 w-full h-full rounded-xl py-12 px-9 flex flex-col items-start bg-white bg-opacity-5 backdrop-blur-[25px] gap-5 '>
             
@@ -28,7 +28,7 @@ const ServiceSection = () => {
             
           </div>
            </div>
-          <div className=' w-3/12 px-[10px] py-[10px]  ' > 
+          <div className=' w-full md:w-6/12 xl:w-3/12 px-[10px] py-[10px]  ' > 
           
           <div className='border border-solid border-white border-opacity-5 w-full h-full rounded-xl py-12 px-9 flex flex-col items-start bg-white bg-opacity-5 backdrop-blur-[25px] gap-5 '>
             
@@ -40,7 +40,7 @@ const ServiceSection = () => {
             
           </div>
            </div>
-          <div className=' w-4/12 px-[10px] py-[10px]  ' > 
+          <div className=' w-full md:w-6/12 xl:w-4/12 px-[10px] py-[10px]  ' > 
           
           <div className='border border-solid border-white border-opacity-5 w-full h-full rounded-xl py-12 px-9 flex flex-col items-start bg-white bg-opacity-5 backdrop-blur-[25px] gap-5 '>
             
@@ -52,7 +52,7 @@ Video Editing        </p>
             
           </div>
            </div>
-          <div className=' w-4/12 px-[10px] py-[10px]  ' > 
+          <div className=' w-full md:w-6/12 xl:w-4/12 px-[10px] py-[10px]  ' > 
           
           <div className='border border-solid border-white border-opacity-5 w-full h-full rounded-xl py-12 px-9 flex flex-col items-start bg-white bg-opacity-5 backdrop-blur-[25px] gap-5 '>
             
@@ -68,7 +68,7 @@ Video Editing        </p>
             
           </div>
            </div>
-          <div className=' w-4/12 px-[10px] py-[10px]  ' > 
+          <div className=' w-full md:w-6/12 xl:w-4/12 px-[10px] py-[10px]  ' > 
           
           <div className='border border-solid border-white border-opacity-5 w-full h-full rounded-xl py-12 px-9 flex flex-col items-start bg-white bg-opacity-5 backdrop-blur-[25px] gap-5 '>
             
