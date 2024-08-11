@@ -34,7 +34,7 @@ const Navbar = () => {
             style={{ top: nav.top }}
         >
             <div className="container mx-auto max-w-[90rem] flex flex-row items-center justify-between">
-                <p className="text-[32px] font-semibold">logo</p>
+                <h1 className="text-[24px] font-semibold">DevelopWithAyush</h1>
                 <nav className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-[40px]">
                     <Link href="#home" className="text-[20px] capitalize text-gray-300">Home</Link>
                     <Link href="#tech" className="text-[20px] capitalize text-gray-300">tech</Link>

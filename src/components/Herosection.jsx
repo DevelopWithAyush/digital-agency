@@ -38,9 +38,6 @@ export function Herosection() {
                 growth.
               </h1>
               <p className="w-[90%] md:max-w-5xl lg:max-w-[70rem] text-[16px] md:text-[20px] md:leading-[20px] text-center leading-[16px] font-normal">
-                {` "We offer comprehensive online solutions, including website
-            development, SEO, content creation, and social media management, to
-            enhance brand visibility and engagement for diverse clients."`}
               </p>
             </div>
             <button
