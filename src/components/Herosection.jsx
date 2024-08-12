@@ -42,8 +42,8 @@ export function Herosection() {
             </div>
             <button
               className="
-          overflow-hidden relative  flex flex-row items-center justify-center py-3 px-7 rounded-[13px] text-[20px] border-[1px] border-solid bg-white bg-opacity-5 backdrop-blur-[25px]  border-[#FFF] border-opacity-15"
-            >
+          overflow-hidden relative  flex flex-row items-center justify-center gap-2 py-3 px-7 rounded-[13px] text-[20px] border-[1px] border-solid bg-white bg-opacity-5 backdrop-blur-[25px]  border-[#FFF] border-opacity-15"
+            ><HiSparkles className="text-yellow-400" />
               Contact us
               <BorderBeam size={100} duration={3} delay={9} />
             </button>

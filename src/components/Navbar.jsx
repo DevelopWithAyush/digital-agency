@@ -41,7 +41,7 @@ const Navbar = () => {
                     <Link href="#services" className="text-[20px] capitalize text-gray-300">services</Link>
                     <Link href="#steps" className="text-[20px] capitalize text-gray-300">Steps</Link>
                 </nav>
-                <button className="flex relative gap-[10px] flex-shrink-0 items-center rounded-[12px] border border-white border-opacity-20 justify-center py-2 px-6 text-[20px]">
+                <button className="md:flex hidden relative gap-[10px] flex-shrink-0 items-center rounded-[12px] border border-white border-opacity-20 justify-center py-2 px-6 text-[20px]">
                     <HiSparkles className="text-yellow-400" /> Contact Us
                 </button>
             </div>

@@ -6,13 +6,7 @@ import { useMediaSizes } from "./Hooks/useMediaSizes";
 
 const reviews = [
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
-  },
-  {
     img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530578/jquery-2_a1aelu.svg",
-  },
-  {
-    img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530574/adobe-after-effects-icon_iyybug.svg",
   },
   {
     img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530475/react-2_hytolh.svg",
@@ -29,14 +23,21 @@ const reviews = [
   {
     img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530325/favicon_mibjqr.ico",
   },
-  {
-    img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530316/adobe-premiere-pro-icon_2_p3tpoo.png",
-  },
+
   {
     img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530314/nextjs-icon-svgrepo-com_nktaag.png",
   },
   {
     img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530772/logo-javascript_mgz5j4.svg",
+  },
+  {
+    img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530574/adobe-after-effects-icon_iyybug.svg",
+  },
+  {
+    img: "https://res.cloudinary.com/dpqsatnvt/image/upload/v1714530316/adobe-premiere-pro-icon_2_p3tpoo.png",
+  },
+  {
+    img: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
   },
 ];
 const Tech = () => {
@@ -129,10 +130,7 @@ const DownLine = () => {
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
   return (
-    <div
-      ref={ref}
-      className=" w-[4px] h-full rounded-full"
-    >
+    <div ref={ref} className=" w-[4px] h-full rounded-full">
       <div
         className="w-[4px]   rounded-full "
         style={{
@@ -149,7 +147,7 @@ const DownLine = () => {
 const P = () => {
   const ref = useRef(null);
   const isVisible = useElementVisibility(ref);
-  const { lg, xl } = useMediaSizes()
+  const { lg, xl } = useMediaSizes();
   return (
     <p
       ref={ref}
@@ -157,7 +155,9 @@ const P = () => {
       style={{
         transitionDuration: ".5s",
         opacity: `${isVisible ? 1 : 0}`,
-        left: `${isVisible && (lg || xl) ? '0px' : `${lg || xl ? '-50px' : "0px"}`}`,
+        left: `${
+          isVisible && (lg || xl) ? "0px" : `${lg || xl ? "-50px" : "0px"}`
+        }`,
         transitionDelay: "1s",
       }}
     >
