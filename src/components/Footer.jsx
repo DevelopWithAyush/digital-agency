@@ -54,7 +54,7 @@ const Footer = () => {
                 <SocialLink href="https://twitter.com" icon={XIcon}>
                     Follow me on X
                 </SocialLink>
-                <SocialLink href="http://github.com" icon={GitHubIcon}>
+                <SocialLink href="https://github.com/DevelopWithAyush" icon={GitHubIcon}>
                     Follow me on GitHub
                 </SocialLink>
                 <SocialLink href="/" icon={DiscordIcon}>
